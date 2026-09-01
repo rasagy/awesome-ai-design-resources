@@ -1,6 +1,6 @@
 /* Awesome AI Design Resources — list rendering, filtering, theme. No build step. */
 
-const state = { q: '', category: 'all', by: null, view: 'grid', data: null };
+const state = { q: '', category: 'all', view: 'grid', data: null };
 
 const el = {
   list:   document.getElementById('list'),
@@ -36,7 +36,6 @@ function readUrl() {
   const p = new URLSearchParams(location.search);
   state.q = p.get('q') || '';
   state.category = p.get('c') || 'all';
-  state.by = p.get('by') || null;
   let view = p.get('v');
   if (view !== 'grid' && view !== 'list') {
     try { view = localStorage.getItem('view'); } catch (e) { view = null; }
@@ -49,7 +48,6 @@ function writeUrl() {
   const p = new URLSearchParams();
   if (state.q) p.set('q', state.q);
   if (state.category !== 'all') p.set('c', state.category);
-  if (state.by) p.set('by', state.by);
   if (state.view !== 'grid') p.set('v', state.view);
   const qs = p.toString();
   history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
@@ -59,7 +57,6 @@ function writeUrl() {
 
 function matches(r) {
   if (state.category !== 'all' && r.category !== state.category) return false;
-  if (state.by && r.by !== state.by) return false;
   if (!state.q) return true;
   const hay = [r.name, r.domain, r.note, (r.tags || []).join(' ')].join(' ').toLowerCase();
   return state.q.toLowerCase().split(/\s+/).every((t) => hay.includes(t));
@@ -80,27 +77,7 @@ function renderChips() {
     </button>`).join('');
 }
 
-function renderByPill() {
-  const old = document.getElementById('by-pill');
-  if (old) old.remove();
-  if (!state.by) return;
-  const person = state.data.contributors[state.by];
-  const pill = document.createElement('button');
-  pill.id = 'by-pill';
-  pill.className = 'by-pill';
-  pill.type = 'button';
-  pill.innerHTML = `via ${esc(person ? person.name : state.by)} <span aria-hidden="true">×</span>`;
-  pill.setAttribute('aria-label', `Clear contributor filter`);
-  pill.addEventListener('click', () => { state.by = null; render(); });
-  el.view.before(pill);
-}
-
 function row(r, i) {
-  const person = r.by ? state.data.contributors[r.by] : null;
-  const credit = person
-    ? `<button class="row__by" type="button" data-by="${esc(r.by)}"
-               title="Added by ${esc(person.name)}" aria-label="Show only links added by ${esc(person.name)}"><span class="row__by-label">via</span><span class="initial" aria-hidden="true">${esc(person.name.trim().charAt(0).toUpperCase())}</span></button>`
-    : '';
   const tags = (r.tags || []).map((t) => `<span>${esc(t)}</span>`).join('');
 
   return `
@@ -115,7 +92,7 @@ function row(r, i) {
       </div>
       <div class="row__meta">
         <p class="row__note">${highlight(r.note, state.q)}</p>
-        <div class="row__tags">${tags}${credit}</div>
+        <div class="row__tags">${tags}</div>
       </div>
       <span class="row__go" aria-hidden="true">↗</span>
     </article>
@@ -124,6 +101,7 @@ function row(r, i) {
 
 function paintView() {
   el.list.dataset.view = state.view;
+  el.view.dataset.active = state.view;
   for (const b of el.view.querySelectorAll('.view__btn'))
     b.setAttribute('aria-pressed', String(b.dataset.view === state.view));
 }
@@ -135,7 +113,6 @@ function render() {
   el.count.textContent = `${hits.length} of ${state.data.resources.length} resources`;
   for (const b of el.chips.querySelectorAll('.chip'))
     b.setAttribute('aria-pressed', String(b.dataset.cat === state.category));
-  renderByPill();
   paintView();
   writeUrl();
 }
@@ -146,14 +123,6 @@ el.chips.addEventListener('click', (e) => {
   const b = e.target.closest('.chip');
   if (!b) return;
   state.category = b.dataset.cat;
-  render();
-});
-
-el.list.addEventListener('click', (e) => {
-  const b = e.target.closest('.row__by');
-  if (!b) return;
-  e.preventDefault();
-  state.by = b.dataset.by;
   render();
 });
 

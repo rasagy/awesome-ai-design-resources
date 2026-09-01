@@ -312,6 +312,7 @@ a.ghost:hover {
 .chip[aria-pressed="true"] span { color: inherit; opacity: 0.7; }
 
 .view {
+  position: relative;
   display: flex;
   gap: 0;
   height: 2rem;              /* matches the search field */
@@ -321,7 +322,24 @@ a.ghost:hover {
   background: var(--paper-2);
   flex: none;
 }
+
+/* the thumb — one element that slides between the two buttons */
+.view::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.625rem;
+  height: 1.625rem;
+  border-radius: 3px;
+  background: var(--paper);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
+  transition: transform 0.26s cubic-bezier(0.32, 0.72, 0.24, 1);
+}
+.view[data-active="list"]::before { transform: translateX(100%); }
 .view__btn {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -344,11 +362,7 @@ a.ghost:hover {
   stroke-linecap: round;
 }
 .view__btn:hover { color: var(--ink); }
-.view__btn[aria-pressed="true"] {
-  color: var(--ink);
-  background: var(--paper);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-}
+.view__btn[aria-pressed="true"] { color: var(--ink); }
 
 .sr-only {
   position: absolute;
@@ -411,17 +425,6 @@ a.ghost:hover {
   margin-top: auto;
   padding-top: 0.7rem;
 }
-/* Cards carry the initial alone, pinned to the bottom-right corner of the row */
-.list[data-view="grid"] .row__by { margin-left: auto; }
-.list[data-view="grid"] .row__by::before { content: none; }
-.list[data-view="grid"] .row__by-label { display: none; }
-
-.list[data-view="list"] .row__by {
-  position: absolute;
-  top: 0.95rem;
-  right: 2.1rem;
-}
-.list[data-view="list"] .row__by::before { content: none; }
 .list[data-view="grid"] .row__go {
   position: absolute;
   top: 1.05rem;
@@ -433,7 +436,7 @@ a.ghost:hover {
 .row article {
   position: relative;
   display: grid;
-  grid-template-columns: 2.75rem minmax(0, 15rem) minmax(0, 1fr) 5.25rem;
+  grid-template-columns: 2.75rem minmax(0, 15rem) minmax(0, 1fr) 1.5rem;
   align-items: baseline;
   gap: clamp(0.75rem, 2.5vw, 2rem);
   padding-block: 1rem;
@@ -493,43 +496,6 @@ a.ghost:hover {
 }
 .row__tags > span::before { content: "#"; opacity: 0.55; }
 
-.row__by::before {
-  content: "·";
-  color: var(--ink-3);
-  margin-right: 0.55rem;
-  border: 0;
-}
-
-.row__by {
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  font: inherit;
-  color: var(--ink-2);
-  background: none;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-  transition: color 0.18s;
-}
-.row__by .initial {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.15rem;
-  height: 1.15rem;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  font-family: var(--util);
-  font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding-left: 0.5px;
-}
-.row__by:hover { color: var(--accent); }
-
 .row__go {
   justify-self: end;
   font-size: 1rem;
@@ -538,35 +504,6 @@ a.ghost:hover {
   transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s;
 }
 .row article:hover .row__go { transform: translate(0.15rem, -0.15rem); color: var(--accent); }
-
-.by-pill {
-  font-family: var(--util);
-  font-weight: 500;
-  font-size: var(--t-meta);
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
-  border-radius: 999px;
-  padding: 0.3rem 0.7rem;
-  cursor: pointer;
-  white-space: nowrap;
-}
-.by-pill span { margin-left: 0.35rem; opacity: 0.7; }
-
-mark {
-  background: var(--accent-bg);
-  color: inherit;
-  border-radius: 2px;
-  padding: 0 0.1em;
-}
-
-.empty {
-  font-family: var(--util);
-  font-size: var(--t-body);
-  color: var(--ink-3);
-  padding-block: 5rem;
-  text-align: center;
-}
 
 /* ── Footer ───────────────────────────────────────────── */
 
@@ -611,6 +548,7 @@ mark {
   .controls__inner { flex-wrap: wrap; }
   .search { flex: 1 1 100%; width: auto; }
   .view {
+  position: relative;
   display: flex;
   gap: 0;
   height: 2rem;              /* matches the search field */
@@ -620,7 +558,24 @@ mark {
   background: var(--paper-2);
   flex: none;
 }
+
+/* the thumb — one element that slides between the two buttons */
+.view::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.625rem;
+  height: 1.625rem;
+  border-radius: 3px;
+  background: var(--paper);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
+  transition: transform 0.26s cubic-bezier(0.32, 0.72, 0.24, 1);
+}
+.view[data-active="list"]::before { transform: translateX(100%); }
 .view__btn {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -643,11 +598,7 @@ mark {
   stroke-linecap: round;
 }
 .view__btn:hover { color: var(--ink); }
-.view__btn[aria-pressed="true"] {
-  color: var(--ink);
-  background: var(--paper);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-}
+.view__btn[aria-pressed="true"] { color: var(--ink); }
 
 .count { display: none; }
   .masthead__inner { grid-template-columns: minmax(0, 1fr); }
