@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Awesome AI Design Resources</title>
+<meta name="description" content="A curated collection of AI design tools, agent skills, systems and reading. Collated by Rasagy & Kenneth." />
+<meta property="og:title" content="Awesome AI Design Resources" />
+<meta property="og:description" content="An inspiration index for vibe coders — references, component kits, type, motion and prompts." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f%5B%5D=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      if (!saved) saved = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#list">Skip to resources</a>
+
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <h1 class="wordmark"><a href="./">Awesome AI Design Resources</a></h1>
+    <p class="tag">Inspiration for vibe coders — <span>galleries, components, type, motion, brand, prompts.</span></p>
+    <p class="byline">Collated by <a href="https://rasagy.in/" rel="noopener">Rasagy</a> &amp; <a href="https://kenneth.dsouza.im/ai/" rel="noopener">Kenneth</a></p>
+    <div class="masthead__actions">
+      <a class="ghost" href="https://github.com/rasagy/awesome-ai-design-resources/edit/main/data/resources.json" target="_blank" rel="noopener">Submit a link</a>
+      <button class="ghost ghost--icon" id="theme" type="button" aria-label="Switch to dark theme" title="Switch theme">
+        <svg class="icon-sun" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+          <circle cx="10" cy="10" r="3.6" />
+          <path d="M10 1.4v2.2M10 16.4v2.2M18.6 10h-2.2M3.6 10H1.4M16.08 3.92l-1.56 1.56M5.48 14.52l-1.56 1.56M16.08 16.08l-1.56-1.56M5.48 5.48 3.92 3.92" />
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+          <path d="M16.5 12.4A7 7 0 0 1 7.6 3.5a7 7 0 1 0 8.9 8.9Z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="controls" id="controls">
+  <div class="wrap controls__inner">
+    <div class="search">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14"/></svg>
+      <input id="q" type="search" placeholder="Search resources" autocomplete="off" aria-label="Search resources" />
+      <kbd id="hotkey" aria-hidden="true"></kbd>
+    </div>
+    <nav class="chips" id="chips" aria-label="Filter by category"></nav>
+    <div class="view" id="view" role="group" aria-label="Layout">
+      <button class="view__btn" type="button" data-view="grid" aria-pressed="true" aria-label="Grid view" title="Grid">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="1.5" width="5.5" height="5.5"/><rect x="9" y="1.5" width="5.5" height="5.5"/><rect x="1.5" y="9" width="5.5" height="5.5"/><rect x="9" y="9" width="5.5" height="5.5"/></svg>
+      </button>
+      <button class="view__btn" type="button" data-view="list" aria-pressed="false" aria-label="List view" title="List">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 3.5h13M1.5 8h13M1.5 12.5h13"/></svg>
+      </button>
+    </div>
+    <span class="sr-only" id="count" aria-live="polite"></span>
+  </div>
+</div>
+
+<main class="wrap">
+  <ol class="list" id="list" data-view="grid"></ol>
+  <p class="empty" id="empty" hidden>No matches. Try a broader term.</p>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p>Open source, MIT.</p>
+    <p class="mono"><span id="total"></span> entries · last touched <span id="updated"></span></p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

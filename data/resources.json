@@ -1,0 +1,197 @@
+{
+  "contributors": {
+    "kenneth": {
+      "name": "Kenneth",
+      "url": "https://kenneth.dsouza.im/ai/"
+    },
+    "rasagy": {
+      "name": "Rasagy",
+      "url": "https://rasagy.in/"
+    }
+  },
+  "categories": [
+    {
+      "id": "inspiration",
+      "label": "Inspiration"
+    },
+    {
+      "id": "components",
+      "label": "Components"
+    },
+    {
+      "id": "motion",
+      "label": "Motion"
+    },
+    {
+      "id": "brand",
+      "label": "Brand & Copy"
+    }
+  ],
+  "resources": [
+    {
+      "name": "Mobbin",
+      "url": "https://mobbin.com",
+      "domain": "mobbin.com",
+      "category": "inspiration",
+      "note": "Every onboarding, paywall and empty state you'll ever need to copy the structure of.",
+      "tags": [
+        "mobile",
+        "patterns"
+      ],
+      "added": "2026-07-19"
+    },
+    {
+      "name": "Interface In Game",
+      "url": "https://interfaceingame.com",
+      "domain": "interfaceingame.com",
+      "category": "inspiration",
+      "note": "Game UI, catalogued by genre and element. The best cure for a menu that feels like a form.",
+      "tags": [
+        "games",
+        "ui"
+      ],
+      "added": "2026-09-01",
+      "by": "kenneth"
+    },
+    {
+      "name": "ShotDeck",
+      "url": "https://shotdeck.com",
+      "domain": "shotdeck.com",
+      "category": "inspiration",
+      "note": "Film stills searchable by colour, lens and lighting. Where hero art and palettes should start.",
+      "tags": [
+        "film",
+        "color"
+      ],
+      "added": "2026-09-01",
+      "by": "kenneth"
+    },
+    {
+      "name": "Aesthetics Wiki",
+      "url": "https://aesthetics.fandom.com",
+      "domain": "aesthetics.fandom.com",
+      "category": "inspiration",
+      "note": "A sprawling taxonomy of visual subcultures. Useful for naming a direction so a model can hold it.",
+      "tags": [
+        "reference",
+        "moodboard"
+      ],
+      "added": "2026-09-01",
+      "by": "kenneth"
+    },
+    {
+      "name": "Deck Gallery",
+      "url": "https://deck.gallery",
+      "domain": "deck.gallery",
+      "category": "inspiration",
+      "note": "Real pitch decks. Slide-level lessons in saying one thing per screen.",
+      "tags": [
+        "decks",
+        "layout"
+      ],
+      "added": "2026-09-01",
+      "by": "kenneth"
+    },
+    {
+      "name": "Component Gallery",
+      "url": "https://component.gallery",
+      "domain": "component.gallery",
+      "category": "components",
+      "note": "One component, every design system's take on it, side by side. Settle an API argument in a minute.",
+      "tags": [
+        "reference",
+        "design-systems"
+      ],
+      "added": "2026-09-01",
+      "by": "kenneth"
+    },
+    {
+      "name": "Beautiful UI",
+      "url": "https://beautifului.dev",
+      "domain": "beautifului.dev",
+      "category": "components",
+      "note": "Polished UI pieces worth reverse-engineering when generated output looks flat.",
+      "tags": [
+        "ui",
+        "gallery"
+      ],
+      "added": "2026-09-01",
+      "by": "kenneth"
+    },
+    {
+      "name": "Generative Loaders",
+      "url": "https://generativeloaders.com",
+      "domain": "generativeloaders.com",
+      "category": "motion",
+      "note": "Loading states with a point of view. Copy one instead of shipping another spinner.",
+      "tags": [
+        "loaders",
+        "css"
+      ],
+      "added": "2026-09-01",
+      "by": "kenneth"
+    },
+    {
+      "name": "Logosystem",
+      "url": "https://logosystem.co",
+      "domain": "logosystem.co",
+      "category": "brand",
+      "note": "Marks collected and dissected. Good for finding a shape before you touch a generator.",
+      "tags": [
+        "logos"
+      ],
+      "added": "2026-09-01",
+      "by": "kenneth"
+    },
+    {
+      "name": "Rebrand Gallery",
+      "url": "https://rebrand.gallery",
+      "domain": "rebrand.gallery",
+      "category": "brand",
+      "note": "Before-and-after identity work. Watching what got cut teaches more than the finished mark.",
+      "tags": [
+        "identity"
+      ],
+      "added": "2026-09-01",
+      "by": "kenneth"
+    },
+    {
+      "name": "OG Image Gallery",
+      "url": "https://ogimage.gallery",
+      "domain": "ogimage.gallery",
+      "category": "brand",
+      "note": "Social cards done well. The one asset vibe-coded projects always forget.",
+      "tags": [
+        "og",
+        "social"
+      ],
+      "added": "2026-09-01",
+      "by": "kenneth"
+    },
+    {
+      "name": "Microcopy",
+      "url": "https://microcopy.me",
+      "domain": "microcopy.me",
+      "category": "brand",
+      "note": "Button, error and empty-state wording that sounds human. Fixes the LLM voice fast.",
+      "tags": [
+        "copy",
+        "ux-writing"
+      ],
+      "added": "2026-09-01",
+      "by": "kenneth"
+    },
+    {
+      "name": "Really Good Emails",
+      "url": "https://reallygoodemails.com",
+      "domain": "reallygoodemails.com",
+      "category": "brand",
+      "note": "Thousands of emails with the HTML. Layout ideas that survive constraints.",
+      "tags": [
+        "email"
+      ],
+      "added": "2026-09-01",
+      "by": "kenneth"
+    }
+  ]
+}
