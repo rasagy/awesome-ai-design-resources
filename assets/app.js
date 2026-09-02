@@ -8,8 +8,6 @@ const el = {
   q:      document.getElementById('q'),
   count:  document.getElementById('count'),
   empty:  document.getElementById('empty'),
-  total:  document.getElementById('total'),
-  updated:document.getElementById('updated'),
   theme:  document.getElementById('theme'),
   view:   document.getElementById('view'),
   hotkey: document.getElementById('hotkey'),
@@ -26,9 +24,6 @@ function highlight(text, q) {
   const rx = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'ig');
   return safe.replace(rx, '<mark>$1</mark>');
 }
-
-const fmtDate = (iso) =>
-  new Date(iso + 'T00:00:00').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
 
 /* ── url state ─────────────────────────────────────────── */
 
@@ -175,7 +170,9 @@ el.theme.addEventListener('click', () => {
 
 (async function init() {
   paintTheme();
-  el.hotkey.textContent = IS_APPLE ? '\u2318K' : 'Ctrl K';
+  el.hotkey.innerHTML = IS_APPLE
+    ? '<span>\u2318</span><span>K</span>'
+    : '<span>Ctrl</span><span>K</span>';
   el.q.setAttribute('aria-keyshortcuts', IS_APPLE ? 'Meta+K' : 'Control+K');
   try {
     state.data = await (await fetch('data/resources.json', { cache: 'no-cache' })).json();
@@ -185,8 +182,6 @@ el.theme.addEventListener('click', () => {
     return;
   }
   state.data.resources.sort((a, b) => (b.added || '').localeCompare(a.added || ''));
-  el.total.textContent = state.data.resources.length;
-  el.updated.textContent = fmtDate(state.data.resources[0].added);
   readUrl();
   renderChips();
   render();

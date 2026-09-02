@@ -26,6 +26,9 @@
   --t-meta:  0.8125rem; /* 13px  byline, chips, counts */
   --t-micro: 0.75rem;   /* 12px  domains, tags, index  */
 
+  --radius: 3px;        /* every control: field, chip, button, key cap */
+  --radius-inner: 2px;  /* a control nested inside another control */
+
   --wrap: 78rem;
   --gutter: clamp(1.25rem, 4vw, 3.5rem);
   color-scheme: light;
@@ -83,7 +86,7 @@ a { color: inherit; }
 :focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: var(--radius);
 }
 
 .wrap {
@@ -104,7 +107,7 @@ a { color: inherit; }
   background: var(--ink);
   color: var(--paper);
   padding: 0.5rem 0.9rem;
-  border-radius: 4px;
+  border-radius: var(--radius);
   font-size: 0.8rem;
 }
 
@@ -123,11 +126,11 @@ a { color: inherit; }
 .wordmark {
   grid-column: 1;
   margin: 0;
-  font-family: var(--display);
+  font-family: var(--util);
   font-weight: 700;
-  font-size: clamp(2rem, 5.5vw, var(--t-h1));
-  line-height: 1.02;
-  letter-spacing: -0.035em;
+  font-size: clamp(1.75rem, 4.6vw, var(--t-h1));
+  line-height: 1.06;
+  letter-spacing: 0;
   text-wrap: balance;
 }
 .wordmark a { text-decoration: none; color: var(--ink); }
@@ -175,7 +178,7 @@ a { color: inherit; }
   text-decoration: none;
   background: none;
   border: 1px solid var(--rule);
-  border-radius: 2px;
+  border-radius: var(--radius);
   padding: 0.3rem 0.7rem;
   cursor: pointer;
   transition: color 0.18s, border-color 0.18s, background 0.18s;
@@ -241,7 +244,7 @@ a.ghost:hover {
   flex: 0 0 auto;
   width: 15rem;
   border: 1px solid var(--rule);
-  border-radius: 999px;
+  border-radius: var(--radius);
   padding: 0.35rem 0.5rem 0.35rem 0.75rem;
   background: var(--paper-2);
   transition: border-color 0.18s;
@@ -266,14 +269,21 @@ a.ghost:hover {
 .search input:focus { outline: none; }
 .search input::-webkit-search-cancel-button { display: none; }
 .search kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.32em;
+  min-width: 2.25rem;
+  height: 1.35rem;
   font-family: var(--util);
   font-weight: 700;
-  font-size: var(--t-micro);
+  font-size: var(--t-meta);
+  letter-spacing: 0.02em;
   white-space: nowrap;
   color: var(--ink-2);
   border: 1px solid var(--rule);
-  border-radius: 3px;
-  padding: 0.05rem 0.3rem;
+  border-radius: var(--radius);
+  padding: 0 0.3rem;
   background: var(--paper);
 }
 
@@ -296,7 +306,7 @@ a.ghost:hover {
   color: var(--ink);
   background: none;
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: var(--radius);
   padding: 0.3rem 0.7rem;
   cursor: pointer;
   white-space: nowrap;
@@ -318,7 +328,7 @@ a.ghost:hover {
   height: 2rem;              /* matches the search field */
   padding: 2px;
   border: 1px solid var(--rule);
-  border-radius: 4px;
+  border-radius: var(--radius);
   background: var(--paper-2);
   flex: none;
 }
@@ -331,7 +341,7 @@ a.ghost:hover {
   left: 2px;
   width: 1.625rem;
   height: 1.625rem;
-  border-radius: 3px;
+  border-radius: var(--radius-inner);
   background: var(--paper);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
   transition: transform 0.26s cubic-bezier(0.32, 0.72, 0.24, 1);
@@ -347,12 +357,13 @@ a.ghost:hover {
   height: 1.625rem;
   padding: 0;
   border: 0;
-  border-radius: 3px;
+  border-radius: var(--radius-inner);
   background: none;
   color: var(--ink-3);
   cursor: pointer;
   transition: color 0.16s, background 0.16s;
 }
+.view__btn svg { stroke-width: 1.4; }
 .view__btn svg {
   width: 14px;
   height: 14px;
@@ -361,8 +372,8 @@ a.ghost:hover {
   stroke-width: 1.5;
   stroke-linecap: round;
 }
-.view__btn:hover { color: var(--ink); }
-.view__btn[aria-pressed="true"] { color: var(--ink); }
+.view__btn:hover { color: var(--ink-2); }
+.view__btn[aria-pressed="true"] { color: var(--ink-2); }
 
 .sr-only {
   position: absolute;
@@ -379,6 +390,11 @@ a.ghost:hover {
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list:empty {
+  display: none;
   margin: 0;
   padding: 0;
 }
@@ -444,6 +460,13 @@ a.ghost:hover {
 }
 .row article:hover { background: var(--paper-2); }
 
+/* List rows: the hover surface runs wider than the text, so the tint has
+   breathing room without the row losing alignment with the header grid. */
+.list[data-view="list"] article {
+  padding-inline: 1rem;
+  margin-inline: -1rem;
+}
+
 .stretch { text-decoration: none; }
 .stretch::after {
   content: "";
@@ -505,6 +528,19 @@ a.ghost:hover {
 }
 .row article:hover .row__go { transform: translate(0.15rem, -0.15rem); color: var(--accent); }
 
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 12rem;
+  margin: 0;
+  font-family: var(--util);
+  font-weight: 500;
+  font-size: var(--t-body);
+  color: var(--ink-3);
+}
+.empty[hidden] { display: none; }
+
 /* ── Footer ───────────────────────────────────────────── */
 
 .footer {
@@ -554,7 +590,7 @@ a.ghost:hover {
   height: 2rem;              /* matches the search field */
   padding: 2px;
   border: 1px solid var(--rule);
-  border-radius: 4px;
+  border-radius: var(--radius);
   background: var(--paper-2);
   flex: none;
 }
@@ -567,7 +603,7 @@ a.ghost:hover {
   left: 2px;
   width: 1.625rem;
   height: 1.625rem;
-  border-radius: 3px;
+  border-radius: var(--radius-inner);
   background: var(--paper);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
   transition: transform 0.26s cubic-bezier(0.32, 0.72, 0.24, 1);
@@ -583,12 +619,13 @@ a.ghost:hover {
   height: 1.625rem;
   padding: 0;
   border: 0;
-  border-radius: 3px;
+  border-radius: var(--radius-inner);
   background: none;
   color: var(--ink-3);
   cursor: pointer;
   transition: color 0.16s, background 0.16s;
 }
+.view__btn svg { stroke-width: 1.4; }
 .view__btn svg {
   width: 14px;
   height: 14px;
@@ -597,8 +634,8 @@ a.ghost:hover {
   stroke-width: 1.5;
   stroke-linecap: round;
 }
-.view__btn:hover { color: var(--ink); }
-.view__btn[aria-pressed="true"] { color: var(--ink); }
+.view__btn:hover { color: var(--ink-2); }
+.view__btn[aria-pressed="true"] { color: var(--ink-2); }
 
 .count { display: none; }
   .masthead__inner { grid-template-columns: minmax(0, 1fr); }

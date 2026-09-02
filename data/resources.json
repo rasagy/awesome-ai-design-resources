@@ -7,6 +7,10 @@
     "rasagy": {
       "name": "Rasagy",
       "url": "https://rasagy.in/"
+    },
+    "arunesh": {
+      "name": "Arunesh",
+      "url": "https://arune.sh"
     }
   },
   "categories": [
@@ -25,6 +29,10 @@
     {
       "id": "brand",
       "label": "Brand & Copy"
+    },
+    {
+      "id": "tools",
+      "label": "Tools"
     }
   ],
   "resources": [
@@ -192,6 +200,244 @@
       ],
       "added": "2026-09-01",
       "by": "kenneth"
+    },
+    {
+      "name": "Amicro",
+      "url": "https://amicro.vercel.app/",
+      "domain": "amicro.vercel.app",
+      "category": "motion",
+      "note": "React library of micro-interactions and component transitions.",
+      "tags": [
+        "react",
+        "micro-interactions"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "OriginKit",
+      "url": "https://www.originkit.dev/",
+      "domain": "originkit.dev",
+      "category": "components",
+      "note": "Animated, accessible components delivered wherever you work — editor, canvas, or an MCP server that hands agents real components instead of hallucinated ones.",
+      "tags": [
+        "components",
+        "mcp",
+        "animated"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "Nexvyn UI",
+      "url": "https://ui.nexvyn.dev/components",
+      "domain": "ui.nexvyn.dev",
+      "category": "components",
+      "note": "Pre-built, reusable UI components to drop into an app.",
+      "tags": [
+        "react",
+        "components"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "Untitled UI React",
+      "url": "https://www.untitledui.com/react",
+      "domain": "untitledui.com",
+      "category": "components",
+      "note": "The React build of the Untitled UI kit — a large, consistent component set.",
+      "tags": [
+        "react",
+        "design-system"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "awesome-shadcn/ui",
+      "url": "https://awesomeshadcn.dev/",
+      "domain": "awesomeshadcn.dev",
+      "category": "components",
+      "note": "A curated list of everything built around shadcn/ui — blocks, tools, themes and extensions, in one place.",
+      "tags": [
+        "shadcn",
+        "directory",
+        "awesome-list"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "21st.dev",
+      "url": "https://21st.dev/",
+      "domain": "21st.dev",
+      "category": "components",
+      "note": "Registry of shadcn-compatible React components, installable by command.",
+      "tags": [
+        "react",
+        "shadcn",
+        "registry"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "Magic UI",
+      "url": "https://magicui.design/",
+      "domain": "magicui.design",
+      "category": "motion",
+      "note": "Animated components for React and Tailwind, built on Motion.",
+      "tags": [
+        "react",
+        "tailwind"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "Aceternity UI",
+      "url": "https://ui.aceternity.com/",
+      "domain": "ui.aceternity.com",
+      "category": "motion",
+      "note": "Motion-heavy React blocks and full page sections.",
+      "tags": [
+        "react",
+        "tailwind"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "SRCL",
+      "url": "https://www.sacred.computer/",
+      "domain": "sacred.computer",
+      "category": "components",
+      "note": "Open-source React components and styles with terminal aesthetics.",
+      "tags": [
+        "react",
+        "terminal"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "Fancy Components",
+      "url": "https://www.fancycomponents.dev/docs/introduction",
+      "domain": "fancycomponents.dev",
+      "category": "motion",
+      "note": "Docs-first collection of playful React components and effects.",
+      "tags": [
+        "react",
+        "effects"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "Dice UI",
+      "url": "https://diceui.com/",
+      "domain": "diceui.com",
+      "category": "components",
+      "note": "Accessible shadcn/ui components in React, TypeScript and Tailwind.",
+      "tags": [
+        "react",
+        "shadcn",
+        "a11y"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "React Bits",
+      "url": "https://reactbits.dev/",
+      "domain": "reactbits.dev",
+      "category": "motion",
+      "note": "Animated React components to drop into a page.",
+      "tags": [
+        "react",
+        "animation"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "Tremor",
+      "url": "https://www.tremor.so/",
+      "domain": "tremor.so",
+      "category": "components",
+      "note": "React components for dashboards and charts.",
+      "tags": [
+        "react",
+        "dataviz"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "Reverse UI",
+      "url": "https://reverseui.com/components",
+      "domain": "reverseui.com",
+      "category": "motion",
+      "note": "68+ animated UI components, ready to drop in.",
+      "tags": [
+        "react",
+        "animation"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "Tamagui",
+      "url": "https://github.com/tamagui/tamagui",
+      "domain": "github.com",
+      "category": "components",
+      "note": "Universal UI system for React Native and web, with an optimising compiler.",
+      "tags": [
+        "react-native",
+        "universal"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "Animate UI",
+      "url": "https://animate-ui.com/",
+      "domain": "animate-ui.com",
+      "category": "motion",
+      "note": "Animated React components.",
+      "tags": [
+        "react",
+        "animation"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "Motion Primitives",
+      "url": "https://motion-primitives.com/",
+      "domain": "motion-primitives.com",
+      "category": "motion",
+      "note": "Animated component primitives built with Motion.",
+      "tags": [
+        "react",
+        "motion"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
+    },
+    {
+      "name": "tweakcn",
+      "url": "https://tweakcn.com/",
+      "domain": "tweakcn.com",
+      "category": "tools",
+      "note": "Visual theme editor for shadcn/ui — tune the tokens, export the CSS.",
+      "tags": [
+        "shadcn",
+        "theming"
+      ],
+      "added": "2026-09-02",
+      "by": "arunesh"
     }
   ]
 }
