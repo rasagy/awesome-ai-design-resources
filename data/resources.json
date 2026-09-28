@@ -11,6 +11,10 @@
     "arunesh": {
       "name": "Arunesh",
       "url": "https://arune.sh"
+    },
+    "lunareed720": {
+      "name": "lunareed720",
+      "url": "https://raphael.app"
     }
   },
   "categories": [
@@ -219,7 +223,7 @@
       "url": "https://www.originkit.dev/",
       "domain": "originkit.dev",
       "category": "components",
-      "note": "Animated, accessible components delivered wherever you work — editor, canvas, or an MCP server that hands agents real components instead of hallucinated ones.",
+      "note": "Animated, accessible components delivered wherever you work \u2014 editor, canvas, or an MCP server that hands agents real components instead of hallucinated ones.",
       "tags": [
         "components",
         "mcp",
@@ -246,7 +250,7 @@
       "url": "https://www.untitledui.com/react",
       "domain": "untitledui.com",
       "category": "components",
-      "note": "The React build of the Untitled UI kit — a large, consistent component set.",
+      "note": "The React build of the Untitled UI kit \u2014 a large, consistent component set.",
       "tags": [
         "react",
         "design-system"
@@ -259,7 +263,7 @@
       "url": "https://awesomeshadcn.dev/",
       "domain": "awesomeshadcn.dev",
       "category": "components",
-      "note": "A curated list of everything built around shadcn/ui — blocks, tools, themes and extensions, in one place.",
+      "note": "A curated list of everything built around shadcn/ui \u2014 blocks, tools, themes and extensions, in one place.",
       "tags": [
         "shadcn",
         "directory",
@@ -431,13 +435,27 @@
       "url": "https://tweakcn.com/",
       "domain": "tweakcn.com",
       "category": "tools",
-      "note": "Visual theme editor for shadcn/ui — tune the tokens, export the CSS.",
+      "note": "Visual theme editor for shadcn/ui \u2014 tune the tokens, export the CSS.",
       "tags": [
         "shadcn",
         "theming"
       ],
       "added": "2026-09-02",
       "by": "arunesh"
+    },
+    {
+      "name": "Raphael AI",
+      "url": "https://raphael.app",
+      "domain": "raphael.app",
+      "category": "tools",
+      "note": "AI creative workspace that turns any photo into a painting in one click.",
+      "tags": [
+        "image",
+        "art",
+        "generative"
+      ],
+      "added": "2026-09-28",
+      "by": "lunareed720"
     }
   ]
 }
