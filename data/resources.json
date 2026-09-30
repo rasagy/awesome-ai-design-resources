@@ -1585,6 +1585,19 @@
       ],
       "added": "2026-09-30",
       "by": "kenneth"
+    },
+    {
+      "name": "A.I. Shortcuts Are Ruining How We Think",
+      "url": "https://www.nytimes.com/interactive/2026/09/27/opinion/ai-art-creativity.html",
+      "domain": "nytimes.com",
+      "category": "reading",
+      "note": "Giorgia Lupi on why reaching for AI too early skips the part of the work where your point of view gets in. A case for resisting the obvious answer.",
+      "tags": [
+        "process",
+        "dataviz"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
     }
   ]
 }
