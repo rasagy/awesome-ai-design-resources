@@ -228,6 +228,13 @@ document.addEventListener('click', (e) => {
 
 /* A–Z rail: tap a letter, or press and slide along the rail like iOS Contacts.
    A letter with no rows jumps to the next one that has some. */
+/* The rail is a phone affordance only. JS owns its visibility too, so a stale
+   or missing stylesheet can never leave it sitting under the list on desktop. */
+const PHONE = matchMedia('(max-width: 620px)');
+const paintAzVisibility = () => { el.az.hidden = !PHONE.matches; };
+PHONE.addEventListener('change', paintAzVisibility);
+paintAzVisibility();
+
 let azCurrent = '';
 let azHideTimer;
 
