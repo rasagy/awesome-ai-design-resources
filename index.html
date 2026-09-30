@@ -54,6 +54,9 @@
       <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14"/></svg>
       <input id="q" type="search" placeholder="Search resources" autocomplete="off" aria-label="Search resources" />
       <kbd id="hotkey" aria-hidden="true"></kbd>
+      <button class="search__clear" id="clear" type="button" aria-label="Clear search" title="Clear">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 4.5l7 7M11.5 4.5l-7 7"/></svg>
+      </button>
     </div>
     <nav class="chips" id="chips" aria-label="Filter by category"></nav>
     <div class="view" id="view" role="group" aria-label="Layout">
@@ -73,9 +76,18 @@
   <p class="empty" id="empty" hidden>No matches. Try a broader term.</p>
 </main>
 
+<nav class="az" id="az" aria-label="Jump to letter"></nav>
+<div class="az__bubble" id="az-bubble" aria-hidden="true"></div>
+
 <footer class="footer">
   <div class="wrap footer__inner">
     <p>Open source, MIT.</p>
+    <details class="people" id="people">
+      <summary class="ghost">Contributors</summary>
+      <div class="people__panel">
+        <ul class="people__list" id="people-list"></ul>
+      </div>
+    </details>
   </div>
 </footer>
 

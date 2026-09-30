@@ -28,7 +28,7 @@ behind a hard paywall with no browsable preview get closed.
    | `category` | yes      | One of the ids in `categories`. |
    | `note`     | yes      | One or two sentences on *why it earns its place* — what you use it for, not what it is. |
    | `tags`     | no       | Lowercase, hyphenated. Reuse existing tags where you can. |
-   | `added`    | yes      | `YYYY-MM-DD`. Drives the ordering and the "last touched" date. |
+   | `added`    | yes      | `YYYY-MM-DD`. Records when it was added; the list itself is sorted A–Z by `name`. |
    | `by`       | no       | Your key from `contributors`. Omit only for house entries. |
 
 4. Check it renders: `python3 -m http.server 4000`, then search for your entry.

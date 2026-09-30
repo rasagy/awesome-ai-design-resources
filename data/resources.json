@@ -33,6 +33,14 @@
     {
       "id": "tools",
       "label": "Tools"
+    },
+    {
+      "id": "skills",
+      "label": "Agent skills"
+    },
+    {
+      "id": "reading",
+      "label": "Reading & Talks"
     }
   ],
   "resources": [
@@ -438,6 +446,1145 @@
       ],
       "added": "2026-09-02",
       "by": "arunesh"
+    },
+    {
+      "name": "codetocanvas",
+      "url": "https://www.npmjs.com/package/codetocanvas",
+      "domain": "npmjs.com",
+      "category": "tools",
+      "note": "Lays out every screen of a React prototype on one zoomable board, live and joined by flow arrows. Review the whole thing at once instead of clicking through it.",
+      "tags": [
+        "react",
+        "prototyping",
+        "user-flow"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "agent-annotate",
+      "url": "https://www.npmjs.com/package/agent-annotate",
+      "domain": "npmjs.com",
+      "category": "tools",
+      "note": "Click an element or drag over a region of your local page, and the note goes straight into your coding agent's chat. Faster than writing out a screenshot's worth of words.",
+      "tags": [
+        "feedback",
+        "claude-code",
+        "agents"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Unslop",
+      "url": "https://github.com/cursor/plugins/blob/main/pstack/skills/unslop/SKILL.md",
+      "domain": "github.com",
+      "category": "skills",
+      "note": "An agent skill that strips 33 kinds of AI tells from a draft, from hedging to em-dash habits. Run it on anything a model wrote before it ships.",
+      "tags": [
+        "copy",
+        "agents"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Cleaning copy",
+      "url": "https://paste.rachel.systems/ukogokijaz.md",
+      "domain": "paste.rachel.systems",
+      "category": "brand",
+      "note": "A ladder for deciding whether a UI string should exist at all before you polish it. Most interface copy gets better by being deleted.",
+      "tags": [
+        "copy",
+        "ux-writing"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "better-writing",
+      "url": "https://www.skills.sh/jakubkrehel/skills/better-writing",
+      "domain": "skills.sh",
+      "category": "skills",
+      "note": "Jakub Krehel's skill for interface copy: clear errors, consistent terms, and a tone that shifts without leaving the product's voice.",
+      "tags": [
+        "copy",
+        "ux-writing",
+        "agents"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "DialKit",
+      "url": "https://www.dialkit.dev",
+      "domain": "dialkit.dev",
+      "category": "tools",
+      "note": "Josh Puckett's live sliders, colour pickers and spring editors bound to your running UI. Tune the feel by hand instead of guessing numbers in code.",
+      "tags": [
+        "prototyping",
+        "motion",
+        "react"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Agentation",
+      "url": "https://www.agentation.com",
+      "domain": "agentation.com",
+      "category": "tools",
+      "note": "Click elements, leave notes, and hand your agent exact selectors and component paths instead of 'the button on the left'.",
+      "tags": [
+        "feedback",
+        "agents",
+        "claude-code"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Gooey.AI",
+      "url": "https://gooey.ai/",
+      "domain": "gooey.ai",
+      "category": "tools",
+      "note": "Fork a working AI agent workflow and put it on WhatsApp, voice or web without building the plumbing. Handy for testing a conversational idea with real people.",
+      "tags": [
+        "agents",
+        "prototyping"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "show-me",
+      "url": "https://github.com/humanlayer/skills/blob/main/plugins/show-me/skills/show-me/SKILL.md",
+      "domain": "github.com",
+      "category": "skills",
+      "note": "HumanLayer's skill that makes your agent explain with a diagram or a small HTML page instead of a wall of text. It picks the smallest picture that makes the point.",
+      "tags": [
+        "agents",
+        "claude-code"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Hallmark",
+      "url": "https://www.usehallmark.com/",
+      "domain": "usehallmark.com",
+      "category": "skills",
+      "note": "Nutlope's skill against generic-looking AI design, for Claude Code, Cursor and Codex. Install it before you ask for a landing page.",
+      "tags": [
+        "agents",
+        "claude-code"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Taste Skill",
+      "url": "https://tasteskill.dev",
+      "domain": "tasteskill.dev",
+      "category": "skills",
+      "note": "Gives your agent opinions about layout, type and spacing so the first draft isn't the same page everyone else got.",
+      "tags": [
+        "agents",
+        "claude-code"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Open Design",
+      "url": "https://open-design.ai",
+      "domain": "open-design.ai",
+      "category": "tools",
+      "note": "Open-source, local-first alternative to Claude Design. Your coding agent makes the prototypes, decks and dashboards.",
+      "tags": [
+        "agents",
+        "prototyping"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Leva",
+      "url": "https://leva.pmnd.rs",
+      "domain": "leva.pmnd.rs",
+      "category": "tools",
+      "note": "pmndrs' React panel of live controls. One hook and every value you're unsure about gets a slider.",
+      "tags": [
+        "react",
+        "prototyping"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Tufte chart skill",
+      "url": "https://github.com/aref-vc/tufte-claude-skill",
+      "domain": "github.com",
+      "category": "skills",
+      "note": "Turns 'make me a chart' into something Edward Tufte would sign off on: less ink, more data.",
+      "tags": [
+        "dataviz",
+        "claude-code"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Syntax Style",
+      "url": "https://github.com/aref-vc/syntax-style-skill",
+      "domain": "github.com",
+      "category": "skills",
+      "note": "Sentence-level writing craft from Virginia Tufte's Artful Sentences, as a skill. For when the copy is correct but flat.",
+      "tags": [
+        "copy",
+        "claude-code"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Make Interfaces Feel Better",
+      "url": "https://github.com/jakubkrehel/make-interfaces-feel-better",
+      "domain": "github.com",
+      "category": "skills",
+      "note": "Jakub Krehel's list of small details that make UI feel crafted, packaged so your agent applies them for you.",
+      "tags": [
+        "micro-interactions",
+        "agents"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Huashu Design",
+      "url": "https://github.com/alchaincyf/huashu-design",
+      "domain": "github.com",
+      "category": "skills",
+      "note": "A full design skill for Claude Code: high-fidelity prototypes, slides and animation in HTML, with a built-in design review and MP4 export.",
+      "tags": [
+        "prototyping",
+        "decks",
+        "claude-code"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "UI Design Brain",
+      "url": "https://github.com/carmahhawwari/ui-design-brain",
+      "domain": "github.com",
+      "category": "skills",
+      "note": "Best practices and conventions for 60+ UI components, so your agent builds a date picker like someone who has used one.",
+      "tags": [
+        "components",
+        "design-system",
+        "agents"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Plannotator",
+      "url": "https://plannotator.ai",
+      "domain": "plannotator.ai",
+      "category": "tools",
+      "note": "Mark up your agent's plan or diff visually and send the notes back in one click. Review before it builds the wrong thing.",
+      "tags": [
+        "feedback",
+        "agents"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Medal Forge",
+      "url": "https://medal.oooo.so",
+      "domain": "medal.oooo.so",
+      "category": "brand",
+      "note": "Drop in an SVG and get a 3D medal, badge or metal plate, with GLB, USDZ, GIF and MOV export.",
+      "tags": [
+        "3d",
+        "identity"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Pi Design Deck",
+      "url": "https://github.com/nicobailon/pi-design-deck",
+      "domain": "github.com",
+      "category": "tools",
+      "note": "Your agent shows design options as slides with live previews, and you pick one. Built for the Pi agent.",
+      "tags": [
+        "agents",
+        "decks"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "UI Sound Design",
+      "url": "https://github.com/dannyjpwilliams/ui-sound-design-skill",
+      "domain": "github.com",
+      "category": "skills",
+      "note": "Describe a click or chime in plain words and get working Web Audio or Tone.js code back.",
+      "tags": [
+        "sound",
+        "claude-code"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "playhtml",
+      "url": "https://playhtml.fun/",
+      "domain": "playhtml.fun",
+      "category": "components",
+      "note": "Add one attribute and an HTML element becomes interactive and shared by everyone on the page. Small, playful, a bit magic.",
+      "tags": [
+        "micro-interactions",
+        "social"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Agent Sprite Forge",
+      "url": "https://github.com/0x0funky/agent-sprite-forge",
+      "domain": "github.com",
+      "category": "skills",
+      "note": "Sprite sheets, maps and animated GIFs from a prompt, with transparent PNG frames ready for a 2D game.",
+      "tags": [
+        "games",
+        "agents"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Sprite Sheet Creator",
+      "url": "https://github.com/blendi-remade/sprite-sheet-creator",
+      "domain": "github.com",
+      "category": "tools",
+      "note": "Make a playable 2D character and map from a prompt, powered by fal.ai.",
+      "tags": [
+        "games"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Node Banana",
+      "url": "https://github.com/shrimbly/node-banana",
+      "domain": "github.com",
+      "category": "tools",
+      "note": "Free, open node canvas for chaining image-generation steps. See the whole pipeline instead of a chat log.",
+      "tags": [
+        "prototyping"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "OFL Font Baker",
+      "url": "https://github.com/yamatoiizuka/ofl-font-baker",
+      "domain": "github.com",
+      "category": "tools",
+      "note": "A macOS app for building one composite font out of several open-licence fonts.",
+      "tags": [
+        "type"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Awful AI",
+      "url": "https://github.com/daviddao/awful-ai",
+      "domain": "github.com",
+      "category": "reading",
+      "note": "A running list of harmful uses of AI. Worth reading before you design the next feature that decides something about people.",
+      "tags": [
+        "ethics",
+        "reference"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Interaction Kit",
+      "url": "https://interactionkit.org",
+      "domain": "interactionkit.org",
+      "category": "components",
+      "note": "Armond Schneider's copy-ready React components for the quiet details: image expands, notification reveals, pickers. The polish pass, already done.",
+      "tags": [
+        "react",
+        "micro-interactions",
+        "components"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Interface Cheat Sheet",
+      "url": "https://interfaces.dev/cheat-sheet",
+      "domain": "interfaces.dev",
+      "category": "inspiration",
+      "note": "Better and worse versions side by side for animation, type, colour, layout, accessibility and copy. Keep it open during a UI review.",
+      "tags": [
+        "reference",
+        "patterns",
+        "a11y"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "here.now",
+      "url": "https://here.now",
+      "domain": "here.now",
+      "category": "tools",
+      "note": "Your agent publishes an HTML page or file to a live URL in seconds. The fastest way to put a prototype in front of someone.",
+      "tags": [
+        "agents",
+        "prototyping"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Impeccable",
+      "url": "https://impeccable.style",
+      "domain": "impeccable.style",
+      "category": "skills",
+      "note": "When an AI-made page looks sloppy, this skill critiques and fixes the layout, type, colour and spacing. A design pass in one command.",
+      "tags": [
+        "agents",
+        "claude-code"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Data Vizard",
+      "url": "https://github.com/inosaint/data-vizard",
+      "domain": "github.com",
+      "category": "skills",
+      "note": "Turns the data-viz process into a step-by-step wizard your agent guides you through: find the data, analyse, pick a story, design, critique.",
+      "tags": [
+        "dataviz",
+        "agents"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Emil Kowalski's skills",
+      "url": "https://emilkowal.ski/skill",
+      "domain": "emilkowal.ski",
+      "category": "skills",
+      "note": "Free animation skills from Emil Kowalski, like one that finds where your UI should move. Knowing a few motion terms gets you much more out of them.",
+      "tags": [
+        "motion",
+        "agents"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Designer Skills",
+      "url": "https://github.com/Owl-Listener/designer-skills",
+      "domain": "github.com",
+      "category": "skills",
+      "note": "A big set of agent skills for design work from research through systems, UI, interaction and handoff.",
+      "tags": [
+        "agents",
+        "design-systems"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Creative Coding Concept Coach",
+      "url": "https://github.com/rasagy/creative-coding-concept-coach-skill",
+      "domain": "github.com",
+      "category": "skills",
+      "note": "A skill that helps you sharpen a generative or data-driven art idea before any code, as a thinking partner rather than a shortcut.",
+      "tags": [
+        "agents",
+        "creative-coding"
+      ],
+      "added": "2026-09-30",
+      "by": "rasagy"
+    },
+    {
+      "name": "Variant",
+      "url": "https://variant.com",
+      "domain": "variant.com",
+      "category": "tools",
+      "note": "Describe an idea and scroll through endless UI designs for it. Good for finding a direction before you build.",
+      "tags": [
+        "ui",
+        "prototyping"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "DiffUI",
+      "url": "https://diffui.ai",
+      "domain": "diffui.ai",
+      "category": "tools",
+      "note": "Generates several on-brand UI options at once, then turns the one you pick into responsive code.",
+      "tags": [
+        "ui",
+        "prototyping"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Awesome Creative Coding JS Libraries",
+      "url": "https://rasagy.in/awesome-creative-coding-js-libraries",
+      "domain": "rasagy.in",
+      "category": "tools",
+      "note": "Rasagy's pick of JavaScript libraries for charts, generative art and creative coding. Naming the right library gets your agent a much better result.",
+      "tags": [
+        "dataviz",
+        "creative-coding"
+      ],
+      "added": "2026-09-30",
+      "by": "rasagy"
+    },
+    {
+      "name": "FIFA World Cup 2026 data stories",
+      "url": "http://rasagy.in/fifa-wc-26/",
+      "domain": "rasagy.in",
+      "category": "inspiration",
+      "note": "Data stories from one dataset built with different prompt structures. A clear lesson in how much the prompt shapes the chart.",
+      "tags": [
+        "dataviz",
+        "prompts"
+      ],
+      "added": "2026-09-30",
+      "by": "rasagy"
+    },
+    {
+      "name": "From Data to Viz",
+      "url": "https://www.data-to-viz.com/",
+      "domain": "data-to-viz.com",
+      "category": "inspiration",
+      "note": "A decision tree from the shape of your data to the charts that suit it, with the common mistakes for each. Use it before you ask for 'a chart'.",
+      "tags": [
+        "dataviz",
+        "reference"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "How to AI Code",
+      "url": "https://howtoaicode.com/",
+      "domain": "howtoaicode.com",
+      "category": "reading",
+      "note": "Kenneth's free, beginner-friendly guide to building and shipping your first site with AI. Redo the workshop or pass it on.",
+      "tags": [
+        "learning",
+        "claude-code"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Lucide",
+      "url": "https://lucide.dev",
+      "domain": "lucide.dev",
+      "category": "components",
+      "note": "The default icon set for shadcn/ui, and the one most agents reach for. Clean 24px strokes, ISC licence.",
+      "tags": [
+        "icons",
+        "shadcn",
+        "react"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Phosphor Icons",
+      "url": "https://phosphoricons.com",
+      "domain": "phosphoricons.com",
+      "category": "components",
+      "note": "Six weights of every icon, from thin to duotone. Pick a weight to match your type instead of settling. MIT.",
+      "tags": [
+        "icons",
+        "react"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Heroicons",
+      "url": "https://heroicons.com",
+      "domain": "heroicons.com",
+      "category": "components",
+      "note": "From the Tailwind team: outline, solid and mini sizes that sit perfectly next to Tailwind UI. MIT.",
+      "tags": [
+        "icons",
+        "tailwind",
+        "react"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Tabler Icons",
+      "url": "https://tabler.io/icons",
+      "domain": "tabler.io",
+      "category": "components",
+      "note": "Nearly 6,000 consistent stroke icons, so you rarely have to mix sets to find an odd one. MIT.",
+      "tags": [
+        "icons",
+        "react"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Iconoir",
+      "url": "https://iconoir.com",
+      "domain": "iconoir.com",
+      "category": "components",
+      "note": "A calm, slightly softer stroke set for when Lucide feels too familiar. MIT.",
+      "tags": [
+        "icons",
+        "react"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Radix Icons",
+      "url": "https://www.radix-ui.com/icons",
+      "domain": "radix-ui.com",
+      "category": "components",
+      "note": "A small, crisp 15px set drawn for dense interfaces and toolbars. MIT.",
+      "tags": [
+        "icons",
+        "react"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Remix Icon",
+      "url": "https://remixicon.com",
+      "domain": "remixicon.com",
+      "category": "components",
+      "note": "Every icon in both line and fill, which makes on/off and selected states easy. Free for any project, but its own licence bars reselling it as an icon pack.",
+      "tags": [
+        "icons",
+        "react"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Icônes",
+      "url": "https://icones.js.org",
+      "domain": "icones.js.org",
+      "category": "components",
+      "note": "Anthony Fu's search across 150+ open icon sets at once. Copy an SVG or the exact import line for your agent.",
+      "tags": [
+        "icons",
+        "directory"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "The Shape of AI",
+      "url": "https://www.shapeof.ai/",
+      "domain": "shapeof.ai",
+      "category": "inspiration",
+      "note": "A pattern library for AI products: how to show prompts, sources, confidence and control. Start here before designing a chat box.",
+      "tags": [
+        "patterns",
+        "reference"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "AI Design Field Guide",
+      "url": "https://www.aidesignfieldguide.com/",
+      "domain": "aidesignfieldguide.com",
+      "category": "inspiration",
+      "note": "Techniques from the designers behind OpenAI, Anthropic, Figma and Notion, written up as methods you can try.",
+      "tags": [
+        "reference",
+        "patterns"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Articulate",
+      "url": "https://index.how/to/articulate",
+      "domain": "index.how",
+      "category": "inspiration",
+      "note": "The words designers use when they know what they're looking at. Name what you want and the agent gets closer.",
+      "tags": [
+        "reference",
+        "prompts"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "abtest.design",
+      "url": "https://abtest.design/",
+      "domain": "abtest.design",
+      "category": "inspiration",
+      "note": "Real A/B test results from well-known apps. Evidence for a design argument instead of taste.",
+      "tags": [
+        "patterns",
+        "mobile"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Built by Designers",
+      "url": "https://builtbydesigners.com/",
+      "domain": "builtbydesigners.com",
+      "category": "inspiration",
+      "note": "Apps, tools and experiments that designers built and shipped themselves. Proof it can be done, and ideas for what to make.",
+      "tags": [
+        "gallery"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Branding Style Guides",
+      "url": "https://brandingstyleguides.com/",
+      "domain": "brandingstyleguides.com",
+      "category": "brand",
+      "note": "An archive of real brand guideline PDFs. See how a system is documented before you ask an agent to follow one.",
+      "tags": [
+        "identity",
+        "reference"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "YOYOYO",
+      "url": "https://www.yoyoyo.ai/",
+      "domain": "yoyoyo.ai",
+      "category": "brand",
+      "note": "A made-up brand by Google DeepMind and Porto Rocha, built with Nano Banana Pro. What AI in serious brand work can look like.",
+      "tags": [
+        "identity"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Smallbits",
+      "url": "https://smallbits.design/",
+      "domain": "smallbits.design",
+      "category": "components",
+      "note": "290+ pixel icons on an 8×8 grid, free for personal and commercial use. Charm for when a stroke set feels too polite.",
+      "tags": [
+        "icons"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "UX Pilot",
+      "url": "https://uxpilot.ai/",
+      "domain": "uxpilot.ai",
+      "category": "tools",
+      "note": "Generates wireframes and UI screens from a prompt. Quick for exploring layouts before you commit to one.",
+      "tags": [
+        "ui",
+        "prototyping"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Osmo",
+      "url": "https://osmo.inc/",
+      "domain": "osmo.inc",
+      "category": "motion",
+      "note": "An AI video editor for launch videos and motion graphics. Feed it Figma files or footage; it builds the animation as editable code.",
+      "tags": [
+        "animation",
+        "video"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Lapis",
+      "url": "https://lapis-story.com/",
+      "domain": "lapis-story.com",
+      "category": "tools",
+      "note": "Kontinentalist's no-code tool for data stories that mix text, charts and visuals. From the team behind some of Asia's best data journalism.",
+      "tags": [
+        "dataviz"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "The Moving Poster",
+      "url": "https://themovingposter.com/",
+      "domain": "themovingposter.com",
+      "category": "motion",
+      "note": "A gallery of animated posters. Good for seeing how little motion a layout needs to come alive.",
+      "tags": [
+        "gallery",
+        "animation"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "GenCup",
+      "url": "https://www.gencup.art/",
+      "domain": "gencup.art",
+      "category": "inspiration",
+      "note": "Every 2026 World Cup match turned into a generative poster. Football data, code and graphic design in one.",
+      "tags": [
+        "dataviz",
+        "creative-coding"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Angle Ref",
+      "url": "https://angleref.com/",
+      "domain": "angleref.com",
+      "category": "inspiration",
+      "note": "Openly licensed photos of people, searchable by head direction. Reference for illustration and AI image prompts.",
+      "tags": [
+        "reference"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Recode Project",
+      "url": "https://recodeproject.com/",
+      "domain": "recodeproject.com",
+      "category": "inspiration",
+      "note": "Early computer art redrawn in modern code, with the source for each piece. A generative-art history you can fork.",
+      "tags": [
+        "creative-coding"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "sitescroll",
+      "url": "https://sitescroll.fun/",
+      "domain": "sitescroll.fun",
+      "category": "inspiration",
+      "note": "An endless scroll of personal websites. The antidote to every portfolio template looking the same.",
+      "tags": [
+        "gallery"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Contraire",
+      "url": "https://9lens.vercel.app/",
+      "domain": "9lens.vercel.app",
+      "category": "brand",
+      "note": "A panel of AI readers argues with your draft, points out the weak spots and hands back a sharper version.",
+      "tags": [
+        "copy",
+        "agents"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Process Pamphlets",
+      "url": "https://processpamphlets.com/",
+      "domain": "processpamphlets.com",
+      "category": "reading",
+      "note": "One design project per issue from start to finish, told through emails, sketches, drafts and screenshots.",
+      "tags": [
+        "process"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Methods for Random Gradients",
+      "url": "https://justinjay.wang/methods-for-random-gradients/",
+      "domain": "justinjay.wang",
+      "category": "reading",
+      "note": "Justin Jay Wang on the gradients he made at OpenAI: noise heightmaps, layered SVG radials and AI-generated ones, with hundreds of examples.",
+      "tags": [
+        "color",
+        "creative-coding"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "AI Prototyping: Harder, Worser, Faster, Wronger",
+      "url": "https://annaecook.com/writing/2026/ai-prototyping-harder-worser-faster-wronger",
+      "domain": "annaecook.com",
+      "category": "reading",
+      "note": "Anna E. Cook on why a polished AI prototype can skip the thinking a prototype is for. Decide what you're testing before you open a tool.",
+      "tags": [
+        "prototyping",
+        "process"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "State of AI Design 2026",
+      "url": "https://stateofaidesign.com/",
+      "domain": "stateofaidesign.com",
+      "category": "reading",
+      "note": "Designer Fund and Foundation Capital's yearly report on how design teams really use AI: tools, craft and team shape. Data for the 'are we behind?' conversation.",
+      "tags": [
+        "reference",
+        "process"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Katie Dill: scaling intent, quality and artistry with AI",
+      "url": "https://www.youtube.com/watch?v=GLvFTMtw4Jk",
+      "domain": "youtube.com",
+      "category": "reading",
+      "note": "Stripe's head of design on avoiding 'zombie UI': keep a point of view, build your standards into the AI tools, and edit well past the first draft.",
+      "tags": [
+        "talk",
+        "process"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Dan Shipper: run your product team like a research lab",
+      "url": "https://www.youtube.com/watch?v=DqF08Dz3nok",
+      "domain": "youtube.com",
+      "category": "reading",
+      "note": "Every's CEO on keeping a small lab that tries new AI capabilities in real work while the main team improves what already ships.",
+      "tags": [
+        "talk",
+        "process"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Agentic Brand Systems",
+      "url": "https://agentic.littleplains.com/",
+      "domain": "littleplains.com",
+      "category": "reading",
+      "note": "Little Plains on writing a brand's decisions and reasoning down so both people and agents can apply it. The fix for brand drift when everyone ships with AI.",
+      "tags": [
+        "identity",
+        "agents"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Murmur",
+      "url": "https://murmur.krispuckett.com/",
+      "domain": "krispuckett.com",
+      "category": "components",
+      "note": "Shape a responsive glass orb for an AI interface. A presence that listens and thinks, instead of another spinner.",
+      "tags": [
+        "ai-ui",
+        "effects"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Orbkit",
+      "url": "https://orbkit.zzzzshawn.cloud/",
+      "domain": "zzzzshawn.cloud",
+      "category": "components",
+      "note": "Reactive shader orbs to drop into an AI interface, so the assistant has a presence while it listens and thinks.",
+      "tags": [
+        "ai-ui",
+        "effects"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Drawably",
+      "url": "https://www.drawably.dev/",
+      "domain": "drawably.dev",
+      "category": "components",
+      "note": "UI controls that look drawn with a pen. A quick way to make a prototype feel like a sketch, or a product feel human.",
+      "tags": [
+        "components",
+        "ui"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Painterly",
+      "url": "https://painterly.design-tools.workers.dev/",
+      "domain": "design-tools.workers.dev",
+      "category": "motion",
+      "note": "Loading animations with a painted, hand-made feel that you copy as code. Nicer than a spinner.",
+      "tags": [
+        "loaders",
+        "animation"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "ShaderGradient",
+      "url": "https://shadergradient.co/",
+      "domain": "shadergradient.co",
+      "category": "motion",
+      "note": "Moving 3D gradients you tune by hand and export for React, Figma or Framer. The fast route to a living hero section.",
+      "tags": [
+        "effects",
+        "animation"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "doppio",
+      "url": "https://doppio.design/",
+      "domain": "doppio.design",
+      "category": "motion",
+      "note": "Motion templates for presenting design work. Makes a portfolio shot or launch post move without opening After Effects.",
+      "tags": [
+        "animation",
+        "decks"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Colors & Fonts",
+      "url": "https://www.colorsandfonts.com/",
+      "domain": "colorsandfonts.com",
+      "category": "brand",
+      "note": "Colour palettes, font pairings and contrast checks in one place. Pick a starting point to hand your agent.",
+      "tags": [
+        "color",
+        "a11y"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Design Your Sunset",
+      "url": "https://www.rachelhow.com/sunset",
+      "domain": "rachelhow.com",
+      "category": "tools",
+      "note": "Build a sunset gradient by hand and export it. A small, lovely tool for backgrounds and brand colour.",
+      "tags": [
+        "color"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Textures",
+      "url": "https://texture.fayaz.workers.dev/",
+      "domain": "fayaz.workers.dev",
+      "category": "tools",
+      "note": "Tactile image filters that run in the browser. Takes the flat, rendered edge off a picture.",
+      "tags": [
+        "effects"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "ASCIInator",
+      "url": "https://asciinator.app/",
+      "domain": "asciinator.app",
+      "category": "tools",
+      "note": "Turns images into finely tuned ASCII art. For terminal-flavoured heroes and loading states.",
+      "tags": [
+        "effects",
+        "terminal"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Shake it to Shape it",
+      "url": "https://shapes.tools/",
+      "domain": "shapes.tools",
+      "category": "tools",
+      "note": "Generates polished SVG shapes for blobs, badges and decorative forms.",
+      "tags": [
+        "effects"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "BuilderTools",
+      "url": "https://www.buildertools.sh/",
+      "domain": "buildertools.sh",
+      "category": "tools",
+      "note": "Free browser tools for making design assets. The small jobs you'd otherwise open a big app for.",
+      "tags": [
+        "directory"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Annual Report Archive",
+      "url": "https://annualreport.gallery/",
+      "domain": "annualreport.gallery",
+      "category": "inspiration",
+      "note": "3,000+ corporate annual reports from 1945 to 1991. Peak editorial and information design, all in one place.",
+      "tags": [
+        "gallery",
+        "dataviz"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
+    },
+    {
+      "name": "Personal Sites (Are.na)",
+      "url": "https://www.are.na/kelindi/personal-sites-_sxervw2jmu",
+      "domain": "are.na",
+      "category": "inspiration",
+      "note": "A hand-picked Are.na channel of personal websites with real character. Look here before you ask an agent for 'a portfolio'.",
+      "tags": [
+        "gallery"
+      ],
+      "added": "2026-09-30",
+      "by": "kenneth"
     }
   ]
 }

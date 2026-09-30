@@ -231,12 +231,13 @@ a.ghost:hover {
   backdrop-filter: blur(12px) saturate(1.4);
 }
 
+/* two rows: search + layout toggle, then the category chips on their own line */
 .controls__inner {
   display: flex;
   align-items: center;
-  gap: clamp(0.75rem, 2vw, 1.75rem);
+  gap: 0.6rem clamp(0.75rem, 2vw, 1.75rem);
   padding-block: 0.7rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .search {
@@ -290,13 +291,36 @@ a.ghost:hover {
   background: var(--paper);
 }
 
+/* once there's a query, the shortcut hint gives way to a clear button */
+.search__clear {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: none;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: color 0.16s, background 0.16s;
+}
+.search__clear:hover { color: var(--ink); background: var(--paper); }
+.search .search__clear svg { width: 12px; height: 12px; stroke: currentColor; stroke-width: 1.6; }
+.search:has(input:not(:placeholder-shown)) kbd { display: none; }
+.search:has(input:not(:placeholder-shown)) .search__clear { display: inline-flex; }
+
 .chips {
+  order: 1;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.3rem;
-  flex: 1 1 auto;
-  overflow-x: auto;
-  scrollbar-width: none;
+  flex: 1 1 100%;
+  min-width: 0;
   padding-block: 0.15rem;
+  margin-inline: -0.7rem;    /* first chip's label lines up with the search field's edge */
 }
 .chips::-webkit-scrollbar { display: none; }
 
@@ -334,6 +358,7 @@ a.ghost:hover {
   border-radius: var(--radius);
   background: var(--paper-2);
   flex: none;
+  margin-left: auto;
 }
 
 /* the thumb — one element that slides between the two buttons */
@@ -548,6 +573,18 @@ a.ghost:hover {
   color: var(--ink-3);
 }
 .empty[hidden] { display: none; }
+.empty { flex-direction: column; gap: 0.6rem; text-align: center; }
+.empty code {
+  font-family: var(--mono);
+  font-size: 0.875em;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 0.15rem 0.45rem;
+  user-select: all;          /* one click selects the whole command */
+}
+.empty a { color: var(--accent); }
 
 /* ── Footer ───────────────────────────────────────────── */
 
@@ -576,6 +613,65 @@ a.ghost:hover {
   color: var(--ink-2);
 }
 
+/* contributors — a disclosure that opens upward from the footer's right edge */
+.people {
+  position: relative;
+  margin-left: auto;
+}
+.people summary { list-style: none; }
+.people summary::-webkit-details-marker { display: none; }
+.people[open] summary { color: var(--ink); border-color: var(--ink-3); background: var(--paper-2); }
+
+.people__panel {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.4rem);
+  z-index: 20;
+  min-width: 15rem;
+  padding: 0.3rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.people__list { margin: 0; padding: 0; list-style: none; }
+.people__list li { display: flex; align-items: center; gap: 0.25rem; }
+
+.people__name {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0.55rem;
+  border: 0;
+  border-radius: var(--radius-inner);
+  background: none;
+  font: inherit;
+  font-size: var(--t-body);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+.people__name span { font-family: var(--util); font-weight: 700; font-size: var(--t-meta); color: var(--ink-3); }
+.people__name:hover,
+.people__name[aria-current="true"] { background: var(--accent-bg); color: var(--accent); }
+
+.people__site {
+  padding: 0.4rem 0.5rem;
+  border-radius: var(--radius-inner);
+  color: var(--ink-3);
+  text-decoration: none;
+}
+.people__site:hover { color: var(--ink); background: var(--paper); }
+
+/* the active-contributor filter, shown ahead of the category chips */
+.chip--by { color: var(--accent); background: var(--accent-bg); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+.chip--by span { color: inherit; opacity: 0.7; }
+
+/* A–Z rail — the iOS Contacts index. Phone widths only; tap or slide to jump. */
+.az,
+.az__bubble { display: none; }
+
 /* ── Responsive ───────────────────────────────────────── */
 
 @media (max-width: 860px) {
@@ -588,13 +684,87 @@ a.ghost:hover {
 }
 
 @media (max-width: 620px) {
-  .controls__inner {
-    padding-block: 0.6rem;
-    flex-wrap: wrap;
+  .controls__inner { padding-block: 0.6rem; }
+  .search { flex: 1 1 0; width: auto; }
+
+  /* on a phone the chips scroll sideways in one line; the edges fade
+     wherever there's more to scroll to */
+  .chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex-basis: calc(100% + 2 * var(--gutter));   /* bleeds to the screen edges */
+    margin-inline: calc(-1 * var(--gutter));
+    padding-inline: var(--gutter);
+    scroll-padding-inline: var(--gutter);
+    --fade-l: 0px;
+    --fade-r: 0px;
+    mask-image: linear-gradient(to right, transparent, #000 var(--fade-l), #000 calc(100% - var(--fade-r)), transparent);
   }
-  .search { flex: 1 1 100%; width: auto; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chips[data-more~="left"]  { --fade-l: 2.5rem; }
+  .chips[data-more~="right"] { --fade-r: 2.5rem; }
   .masthead__inner { grid-template-columns: minmax(0, 1fr); }
   .masthead__actions { grid-column: 1; grid-row: auto; margin-top: 0.6rem; }
+
+  /* leave a lane on the right so the rail never sits on a row's ↗ */
+  main.wrap { padding-right: calc(var(--gutter) + 0.6rem); }
+
+  .az {
+    position: fixed;
+    top: 50%;
+    right: 2px;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100dvh - 11rem);   /* clears the sticky controls */
+    padding-block: 0.25rem;
+    transform: translateY(-40%);
+    touch-action: none;                 /* the drag scrubs, it doesn't scroll */
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .az:empty { display: none; }
+  .az button {
+    flex: 1 1 0;
+    min-height: 0;
+    width: 1.25rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-family: var(--util);
+    font-weight: 700;
+    font-size: 0.6875rem;
+    line-height: 1.25;
+    color: var(--accent);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .az button[aria-disabled="true"] { color: var(--ink-3); opacity: 0.45; cursor: default; }
+
+  .az__bubble {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 16;
+    display: grid;
+    place-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--paper-2) 85%, transparent);
+    backdrop-filter: blur(12px) saturate(1.4);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
+    font-family: var(--util);
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--ink);
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.92);
+    transition: opacity 0.15s, transform 0.15s;
+  }
+  .az__bubble[data-on] { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
 
 @media (prefers-reduced-motion: reduce) {
